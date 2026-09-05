@@ -1,0 +1,122 @@
+{
+  "study": "regularity_mismatch_structure",
+  "audited_grid": {
+    "tau_L": [0.05, 1.0, 31],
+    "tau_mu": [0.05, 1.0, 31],
+    "epsilon": [0.01, 0.95, 95],
+    "kappa_bar": [2.0, 10.0, 100.0]
+  },
+  "requested_cells": 273885,
+  "valid_cells": 258400,
+  "invalid_regularity_cells": 15485,
+  "exact_identities": {
+    "K2": "((kappa_bar-1)/(kappa_bar+1))^2",
+    "K1_minus_K2": "4*kappa_bar^2*(tau_L-tau_mu)^2 / [(kappa_bar+1)^2*(tau_L+kappa_bar*tau_mu+kappa_bar+1)*(kappa_bar*tau_L*tau_mu+tau_L*tau_mu+kappa_bar*tau_L+tau_mu)]",
+    "interpretation": "K1-K2 is the Sigma-weighted variance of q_i=(L_i-mu_i)/(L_i+mu_i). It is nonnegative and vanishes exactly when the two local condition ratios are aligned."
+  },
+  "strata": [
+    {
+      "kappa_bar": 2.0,
+      "attempted_cells": 91295,
+      "valid_cells": 76095,
+      "invalid_regularity_cells": 15200,
+      "valid_fraction": 0.8335067637877211,
+      "K2_invariant": 0.1111111111111111,
+      "max_abs_K2_invariance_error": 1.1102230246251565e-16,
+      "min_K1_minus_K2": -2.7755575615628914e-17,
+      "max_K1_minus_K2": 0.17787632421778765,
+      "max_K1_minus_K2_location": {
+        "tau_L": 1.0,
+        "tau_mu": 0.05,
+        "K1": 0.28898743532889876,
+        "K2": 0.1111111111111111
+      },
+      "max_closed_form_gap_error": 1.1102230246251565e-16,
+      "max_weighted_variance_identity_error": 1.1102230246251565e-16,
+      "max_aligned_rho_error": 7.308598171107406e-13,
+      "negative_penalty_cells_below_minus_1e_10": 0,
+      "minimum_cubic_discriminant": 8.138556495396188e-11,
+      "minimum_Qprime_at_selected_root": 0.0005507560359796493,
+      "minimum_rho_minus_sqrt_epsilon": 0.00836834274133047,
+      "minimum_d_rho_d_K1": 0.004726795583484717,
+      "maximum_normalized_penalty": 0.050735736426212354,
+      "maximum_normalized_penalty_location": {
+        "tau_L": 1.0,
+        "tau_mu": 0.05,
+        "epsilon": 0.95,
+        "rho_star": 0.9839078607282246,
+        "rho_homogeneous": 0.9830477772214959
+      },
+      "tau_mu_admissible_bounds_at_tau_L_min": [0.0, 0.10526315789473685]
+    },
+    {
+      "kappa_bar": 10.0,
+      "attempted_cells": 91295,
+      "valid_cells": 91010,
+      "invalid_regularity_cells": 285,
+      "valid_fraction": 0.9968782518210197,
+      "K2_invariant": 0.6694214876033059,
+      "max_abs_K2_invariance_error": 3.3306690738754696e-16,
+      "min_K1_minus_K2": -2.220446049250313e-16,
+      "max_K1_minus_K2": 0.06318719293423658,
+      "max_K1_minus_K2_location": {
+        "tau_L": 0.05,
+        "tau_mu": 0.9049999999999999,
+        "K1": 0.7326086805375421,
+        "K2": 0.6694214876033056
+      },
+      "max_closed_form_gap_error": 2.6763530627804677e-16,
+      "max_weighted_variance_identity_error": 2.706168622523819e-16,
+      "max_aligned_rho_error": 8.388845174067683e-13,
+      "negative_penalty_cells_below_minus_1e_10": 0,
+      "minimum_cubic_discriminant": 6.784262041037437e-11,
+      "minimum_Qprime_at_selected_root": 0.0018550957523992828,
+      "minimum_rho_minus_sqrt_epsilon": 0.020668583005536534,
+      "minimum_d_rho_d_K1": 0.003509387540373231,
+      "maximum_normalized_penalty": 0.04769661342325026,
+      "maximum_normalized_penalty_location": {
+        "tau_L": 0.05,
+        "tau_mu": 0.9049999999999999,
+        "epsilon": 0.95,
+        "rho_star": 0.9955699012972353,
+        "rho_homogeneous": 0.995348017485594
+      },
+      "tau_mu_admissible_bounds_at_tau_L_min": [0.0, 0.9090909090909091]
+    },
+    {
+      "kappa_bar": 100.0,
+      "attempted_cells": 91295,
+      "valid_cells": 91295,
+      "invalid_regularity_cells": 0,
+      "valid_fraction": 1.0,
+      "K2_invariant": 0.9607881580237231,
+      "max_abs_K2_invariance_error": 4.440892098500626e-16,
+      "min_K1_minus_K2": -2.220446049250313e-16,
+      "max_K1_minus_K2": 0.0015929351620549426,
+      "max_K1_minus_K2_location": {
+        "tau_L": 0.05,
+        "tau_mu": 1.0,
+        "K1": 0.962381093185778,
+        "K2": 0.9607881580237231
+      },
+      "max_closed_form_gap_error": 4.4116186398435175e-16,
+      "max_weighted_variance_identity_error": 4.401860820291148e-16,
+      "max_aligned_rho_error": 1.836308882730009e-13,
+      "negative_penalty_cells_below_minus_1e_10": 0,
+      "minimum_cubic_discriminant": 1.3358203432289883e-12,
+      "minimum_Qprime_at_selected_root": 0.002425604978891993,
+      "minimum_rho_minus_sqrt_epsilon": 0.02481286705562802,
+      "minimum_d_rho_d_K1": 0.003235551585968575,
+      "maximum_normalized_penalty": 0.010151779429042829,
+      "maximum_normalized_penalty_location": {
+        "tau_L": 0.05,
+        "tau_mu": 1.0,
+        "epsilon": 0.95,
+        "rho_star": 0.9994974555791603,
+        "rho_homogeneous": 0.9994923015363407
+      },
+      "tau_mu_admissible_bounds_at_tau_L_min": [0.0, 1.0]
+    }
+  ],
+  "claim_guardrail": "The K2 invariance, K1-K2 identity, weighted-variance representation, and aligned-path equality are algebraic properties of the reproduced two-agent Empirical Law 4.3 under the controlled fixed-average parameterization. Positive root sensitivity and discriminant statements reported here are numerical audits on the stated grid unless separately proved symbolically."
+}
