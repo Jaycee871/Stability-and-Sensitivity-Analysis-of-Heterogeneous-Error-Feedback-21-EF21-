@@ -1,0 +1,82 @@
+{
+  "study": "compression_heterogeneity_interaction_and_retention",
+  "parameterization": {
+    "n": 2,
+    "L": 1.0,
+    "tau_min": 0.05,
+    "tau_max": 1.0,
+    "tau_points": 381,
+    "epsilon_min": 0.01,
+    "epsilon_max": 0.95,
+    "epsilon_points": 189,
+    "kappa_bar": [2.0, 10.0, 100.0],
+    "retention_targets": [0.99, 0.98, 0.95],
+    "cells_per_stratum": 72009,
+    "total_cells": 216027
+  },
+  "definition": {
+    "normalized_penalty": "(rho_star-rho_homogeneous)/(1-rho_homogeneous)",
+    "margin_retention": "(1-rho_star)/(1-rho_homogeneous)=1-normalized_penalty"
+  },
+  "compression_amplification_at_tau_0_05": [
+    {
+      "kappa_bar": 2.0,
+      "normalized_penalty_epsilon_0_01": 0.013207365561207718,
+      "normalized_penalty_epsilon_0_95": 0.050735736426212354,
+      "absolute_increase": 0.037528370865004636,
+      "ratio": 3.841472865355666
+    },
+    {
+      "kappa_bar": 10.0,
+      "normalized_penalty_epsilon_0_01": 0.005446115276153734,
+      "normalized_penalty_epsilon_0_95": 0.016990131036983214,
+      "absolute_increase": 0.01154401576082948,
+      "ratio": 3.1196789225846735
+    },
+    {
+      "kappa_bar": 100.0,
+      "normalized_penalty_epsilon_0_01": 0.0006612552258053899,
+      "normalized_penalty_epsilon_0_95": 0.0020054918884285923,
+      "absolute_increase": 0.0013442366626232024,
+      "ratio": 3.032856014084366
+    }
+  ],
+  "slow_region_summary": [
+    {
+      "kappa_bar": 2.0,
+      "fraction_rho_ge_0_90": 0.23988668083156273,
+      "fraction_rho_ge_0_95": 0.10186226721659793,
+      "fraction_rho_ge_0_99": 0.0
+    },
+    {
+      "kappa_bar": 10.0,
+      "fraction_rho_ge_0_90": 0.6848310627838187,
+      "fraction_rho_ge_0_95": 0.4086294768709467,
+      "fraction_rho_ge_0_99": 0.06033967976225194
+    },
+    {
+      "kappa_bar": 100.0,
+      "fraction_rho_ge_0_90": 1.0,
+      "fraction_rho_ge_0_95": 1.0,
+      "fraction_rho_ge_0_99": 0.6349206349206349
+    }
+  ],
+  "selected_minimum_tau_boundaries": {
+    "retention_0_99": {
+      "kappa_2": {"epsilon_0_05": 0.245, "epsilon_0_20": 0.3375, "epsilon_0_50": 0.3825, "epsilon_0_80": 0.4025, "epsilon_0_95": 0.41},
+      "kappa_10": {"epsilon_0_05": 0.05, "epsilon_0_20": 0.1325, "epsilon_0_50": 0.1675, "epsilon_0_80": 0.1775, "epsilon_0_95": 0.18},
+      "kappa_100": {"epsilon_0_05": 0.05, "epsilon_0_20": 0.05, "epsilon_0_50": 0.05, "epsilon_0_80": 0.05, "epsilon_0_95": 0.05}
+    },
+    "retention_0_98": {
+      "kappa_2": {"epsilon_0_05": 0.09, "epsilon_0_20": 0.185, "epsilon_0_50": 0.2325, "epsilon_0_80": 0.255, "epsilon_0_95": 0.26},
+      "kappa_10": {"epsilon_0_05": 0.05, "epsilon_0_20": 0.05, "epsilon_0_50": 0.05, "epsilon_0_80": 0.05, "epsilon_0_95": 0.05},
+      "kappa_100": {"epsilon_0_05": 0.05, "epsilon_0_20": 0.05, "epsilon_0_50": 0.05, "epsilon_0_80": 0.05, "epsilon_0_95": 0.05}
+    },
+    "retention_0_95": {
+      "kappa_2": {"epsilon_0_05": 0.05, "epsilon_0_20": 0.05, "epsilon_0_50": 0.05, "epsilon_0_80": 0.05, "epsilon_0_95": 0.055},
+      "kappa_10": {"epsilon_0_05": 0.05, "epsilon_0_20": 0.05, "epsilon_0_50": 0.05, "epsilon_0_80": 0.05, "epsilon_0_95": 0.05},
+      "kappa_100": {"epsilon_0_05": 0.05, "epsilon_0_20": 0.05, "epsilon_0_50": 0.05, "epsilon_0_80": 0.05, "epsilon_0_95": 0.05}
+    }
+  },
+  "interpretation": "Finite-grid computational characterization of the reproduced Empirical Law 4.3; not a proof of global monotonicity or universal parameter thresholds."
+}
