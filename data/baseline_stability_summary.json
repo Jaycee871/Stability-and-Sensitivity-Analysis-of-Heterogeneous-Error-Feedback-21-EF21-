@@ -1,0 +1,75 @@
+{
+  "study": "equal_smoothness_stability_landscape",
+  "parameterization": {
+    "n": 2,
+    "L": 1.0,
+    "tau_min": 0.05,
+    "tau_max": 1.0,
+    "tau_points": 96,
+    "epsilon_min": 0.01,
+    "epsilon_max": 0.95,
+    "epsilon_points": 95,
+    "kappa_bar": [2, 10, 100],
+    "cells_per_stratum": 9120,
+    "total_cells": 27360
+  },
+  "findings": {
+    "heterogeneity_monotonicity": "On the default grid, normalized penalty decreases as tau increases in all three conditioning strata; equivalently, stronger heterogeneity increases the relative penalty.",
+    "compression_monotonicity": "On the default grid and within numerical tolerance, normalized penalty is nondecreasing with epsilon in all three conditioning strata.",
+    "conditioning_interaction": "The maximum normalized penalty decreases strongly as average condition number increases: kappa_bar=2 > 10 > 100.",
+    "absolute_vs_relative_peak": "Maximum absolute penalty occurs at low-to-moderate epsilon, while maximum normalized penalty occurs at epsilon=0.95. Near unit contraction the absolute gap shrinks even though it consumes a larger fraction of the remaining contraction margin."
+  },
+  "strata": [
+    {
+      "kappa_bar": 2,
+      "mu_bar": 0.5,
+      "cells": 9120,
+      "rho_min": 0.24999999999999997,
+      "rho_max": 0.9839078607282246,
+      "max_abs_penalty": 0.01564969868481103,
+      "max_abs_at_tau": 0.05,
+      "max_abs_at_epsilon": 0.11,
+      "max_normalized_penalty": 0.050735736426212354,
+      "max_norm_at_tau": 0.05,
+      "max_norm_at_epsilon": 0.95,
+      "max_tau_monotonicity_diff": -3.6438629761696245e-07,
+      "min_epsilon_monotonicity_diff": -3.685457320497856e-11,
+      "tau_monotone_nonincreasing": true,
+      "epsilon_monotone_nondecreasing": true
+    },
+    {
+      "kappa_bar": 10,
+      "mu_bar": 0.1,
+      "cells": 9120,
+      "rho_min": 0.728504656738886,
+      "rho_max": 0.9954270552780955,
+      "max_abs_penalty": 0.0021019793728956904,
+      "max_abs_at_tau": 0.05,
+      "max_abs_at_epsilon": 0.08,
+      "max_normalized_penalty": 0.016990131036983214,
+      "max_norm_at_tau": 0.05,
+      "max_norm_at_epsilon": 0.95,
+      "max_tau_monotonicity_diff": -1.6682197845760996e-07,
+      "min_epsilon_monotonicity_diff": -6.038223780313029e-11,
+      "tau_monotone_nonincreasing": true,
+      "epsilon_monotone_nondecreasing": true
+    },
+    {
+      "kappa_bar": 100,
+      "mu_bar": 0.01,
+      "cells": 9120,
+      "rho_min": 0.9679068351276583,
+      "rho_max": 0.9994933197214914,
+      "max_abs_penalty": 0.000030184229864005374,
+      "max_abs_at_tau": 0.05,
+      "max_abs_at_epsilon": 0.07,
+      "max_normalized_penalty": 0.0020054918884285923,
+      "max_norm_at_tau": 0.05,
+      "max_norm_at_epsilon": 0.95,
+      "max_tau_monotonicity_diff": -2.0396636011085392e-08,
+      "min_epsilon_monotonicity_diff": -7.7064496250967e-10,
+      "tau_monotone_nonincreasing": true,
+      "epsilon_monotone_nondecreasing": true
+    }
+  ]
+}
