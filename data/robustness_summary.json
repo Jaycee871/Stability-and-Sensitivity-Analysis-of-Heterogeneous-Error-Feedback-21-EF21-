@@ -1,0 +1,112 @@
+{
+  "study": "robustness_and_symbolic_structure",
+  "audited_domain": {
+    "tau": [0.05, 1.0],
+    "epsilon": [0.01, 0.95],
+    "kappa_bar": [2.0, 10.0, 100.0]
+  },
+  "offgrid_validation": [
+    {
+      "kappa_bar": 2.0,
+      "pairs": 20000,
+      "seed": 20260809,
+      "max_tau_monotonicity_violation": -1.4900895257892758e-08,
+      "max_epsilon_monotonicity_violation": -4.204157599546645e-12,
+      "max_root_residual": 1.9984014443252818e-15,
+      "min_normalized_penalty": 6.447424542260387e-10,
+      "max_normalized_penalty": 0.05047524201697177
+    },
+    {
+      "kappa_bar": 10.0,
+      "pairs": 20000,
+      "seed": 20260809,
+      "max_tau_monotonicity_violation": -1.1363686401713747e-08,
+      "max_epsilon_monotonicity_violation": -2.640341593947767e-13,
+      "max_root_residual": 1.887379141862766e-15,
+      "min_normalized_penalty": 1.824508321184443e-12,
+      "max_normalized_penalty": 0.0169179517098743
+    },
+    {
+      "kappa_bar": 100.0,
+      "pairs": 20000,
+      "seed": 20260809,
+      "max_tau_monotonicity_violation": -2.186964290018665e-09,
+      "max_epsilon_monotonicity_violation": 3.695096587093741e-10,
+      "max_root_residual": 2.220446049250313e-15,
+      "min_normalized_penalty": 3.3944037625907684e-12,
+      "max_normalized_penalty": 0.0019960183229401837
+    }
+  ],
+  "boundary_convergence": [
+    {
+      "kappa_bar": 2.0,
+      "epsilon": 0.95,
+      "retention_target": 0.99,
+      "continuous_boundary": 0.4076217486520454,
+      "domain_fully_satisfies": false,
+      "grid_boundaries": {
+        "96": 0.41,
+        "191": 0.41,
+        "381": 0.41,
+        "761": 0.40875,
+        "1521": 0.408125
+      }
+    },
+    {
+      "kappa_bar": 10.0,
+      "epsilon": 0.95,
+      "retention_target": 0.99,
+      "continuous_boundary": 0.17985615951449502,
+      "domain_fully_satisfies": false,
+      "grid_boundaries": {
+        "96": 0.18,
+        "191": 0.18,
+        "381": 0.18,
+        "761": 0.18,
+        "1521": 0.18
+      }
+    },
+    {
+      "kappa_bar": 100.0,
+      "epsilon": 0.95,
+      "retention_target": 0.99,
+      "continuous_boundary": 0.05,
+      "domain_fully_satisfies": true,
+      "grid_boundaries": {
+        "96": 0.05,
+        "191": 0.05,
+        "381": 0.05,
+        "761": 0.05,
+        "1521": 0.05
+      }
+    }
+  ],
+  "wolfram_symbolic_cross_check": {
+    "engine": "Wolfram Language 15.0.1",
+    "scale_invariance_K1_K2_difference": [0, 0],
+    "homogeneous_K1_K2": "(L-mu_bar)^2/(L+mu_bar)^2 for both K1 and K2",
+    "discriminant_factor": "positive prefactor (1-s)^6 s^4 times a bivariate polynomial in (s,tau), divided by positive denominators",
+    "strata": [
+      {
+        "kappa_bar": 2,
+        "strictly_positive_polynomial_coefficients": true,
+        "coefficient_count": 63,
+        "minimum_coefficient": 1728
+      },
+      {
+        "kappa_bar": 10,
+        "strictly_positive_polynomial_coefficients": true,
+        "coefficient_count": 63,
+        "minimum_coefficient": 15718843800000
+      },
+      {
+        "kappa_bar": 100,
+        "strictly_positive_polynomial_coefficients": true,
+        "coefficient_count": 63,
+        "minimum_coefficient": 1287108790123562505000000000
+      }
+    ],
+    "analytic_consequence": "For each tested conditioning stratum and 0 < s=sqrt(epsilon) < 1, tau > 0, the cubic discriminant is strictly positive; therefore the empirical-law cubic has three distinct real roots throughout the open controlled domain."
+  },
+  "guardrail": "Off-grid monotonicity and retention results are computational claims restricted to the audited domain. The discriminant sign result is analytic for kappa_bar in {2,10,100}; it is not claimed for arbitrary conditioning without further proof."
+}
